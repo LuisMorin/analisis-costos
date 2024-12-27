@@ -41,13 +41,6 @@ st.markdown("""
 # Encabezado navideño
 st.markdown("<div class='main-title'>🎄 Análisis de Costos con Espíritu Navideño 🎁</div>", unsafe_allow_html=True)
 
-# Agregar imagen navideña
-st.image(
-    "https://upload.wikimedia.org/wikipedia/commons/4/48/Christmas_tree_with_candles.png",
-    caption="Árbol de Navidad 🎄",
-    use_container_width=True
-)
-
 # Sección para ingresar datos
 st.sidebar.header("🔧 Ingreso de Datos Reales 🎅")
 
