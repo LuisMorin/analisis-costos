@@ -41,8 +41,6 @@ st.markdown("""
 # Encabezado navideño
 st.markdown("<div class='main-title'>🎄 Análisis de Costos con Espíritu Navideño 🎁</div>", unsafe_allow_html=True)
 
-# Agregar imagen navideña
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Christmas_tree.svg/1200px-Christmas_tree.svg.png", caption="Árbol de Navidad 🎄", use_column_width="always")
 
 # Datos del Paracetamol
 st.markdown("<div class='section-title'>📋 Cédulas para Producto: Paracetamol</div>", unsafe_allow_html=True)
