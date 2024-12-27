@@ -114,6 +114,53 @@ df_cedula_v = pd.DataFrame({
     "Costo Total Vendido ($)": [(df_cedula_ii["Costo Total Producción Terminada ($)"].sum() / total_prod_terminada) * unidades_vendidas]
 })
 
+# Datos farmacéuticos: Paracetamol
+st.markdown("<div class='section-title'>📋 Cédulas para Producto: Paracetamol</div>", unsafe_allow_html=True)
+
+# Cédula 1: Hoja de Costo Unitario
+data_cedula_1 = {
+    "Elemento": ["MP", "MOD", "CIV", "CIF"],
+    "Cantidad": [20, 1.5, 3, 3],
+    "Costo Unitario ($)": [3, 20, 4, 5],
+    "Costo Total ($)": [60, 30, 12, 15],
+}
+df_cedula_1 = pd.DataFrame(data_cedula_1)
+st.markdown("<div class='section-title'>📋 Cédula 1: Hoja de Costo Unitario</div>", unsafe_allow_html=True)
+st.dataframe(df_cedula_1.style.format({"Cantidad": "{:.1f}", "Costo Unitario ($)": "${:.2f}", "Costo Total ($)": "${:.2f}"}))
+
+# Cédula 2: Valuación de Producción Terminada
+unidades_terminadas = 70000
+data_cedula_2 = {
+    "Elemento": ["MP", "MOD", "CIV", "CIF"],
+    "Cantidad Total": [20 * unidades_terminadas, 2 * unidades_terminadas, 5 * unidades_terminadas, 5 * unidades_terminadas],
+    "Costo Unitario ($)": [3, 20, 4, 5],
+    "Costo Total ($)": [1400000, 1400000, 350000, 350000],
+}
+df_cedula_2 = pd.DataFrame(data_cedula_2)
+st.markdown("<div class='section-title'>📋 Cédula 2: Producción Terminada</div>", unsafe_allow_html=True)
+st.dataframe(df_cedula_2.style.format({"Cantidad Total": "{:.0f}", "Costo Unitario ($)": "${:.2f}", "Costo Total ($)": "${:.2f}"}))
+
+# Cédula 3: Inventario Final en Proceso
+unidades_proceso = 18000
+data_cedula_3 = {
+    "Elemento": ["MP", "MOD", "CIV", "CIF"],
+    "Cantidad Total": [20 * unidades_proceso, 2 * unidades_proceso, 5 * unidades_proceso, 5 * unidades_proceso],
+    "Costo Unitario ($)": [3, 20, 4, 5],
+    "Costo Total ($)": [360000, 360000, 90000, 90000],
+}
+df_cedula_3 = pd.DataFrame(data_cedula_3)
+st.markdown("<div class='section-title'>📋 Cédula 3: Inventario Final en Proceso</div>", unsafe_allow_html=True)
+st.dataframe(df_cedula_3.style.format({"Cantidad Total": "{:.0f}", "Costo Unitario ($)": "${:.2f}", "Costo Total ($)": "${:.2f}"}))
+
+# Costos reales
+data_costos_reales = {
+    "Elemento": ["MP", "MOD", "CIV", "CIF"],
+    "Costo Real ($)": [19.6, 2.4, 5.2, 4.7],
+}
+df_costos_reales = pd.DataFrame(data_costos_reales)
+st.markdown("<div class='section-title'>📋 Costos Reales</div>", unsafe_allow_html=True)
+st.dataframe(df_costos_reales.style.format({"Costo Real ($)": "${:.2f}"}))
+
 # Mostrar tablas
 st.markdown("<div class='section-title'>📋 Cédula I: Hoja de Costo Unitario Estándar</div>", unsafe_allow_html=True)
 st.dataframe(df_cedula_i.style.format({
