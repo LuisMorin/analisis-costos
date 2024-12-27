@@ -43,7 +43,7 @@ st.markdown("<div class='main-title'>🎄 Análisis de Costos con Espíritu Navi
 
 # Agregar imagen navideña
 st.image(
-    "https://upload.wikimedia.org/wikipedia/commons/e/e8/Christmas_tree_1f384.svg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Christmas_tree_with_gifts.svg/1200px-Christmas_tree_with_gifts.svg.png",
     caption="Árbol de Navidad 🎄",
     use_container_width=True
 )
